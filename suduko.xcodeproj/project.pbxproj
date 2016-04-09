@@ -221,8 +221,8 @@
 			projectRoot = "";
 			targets = (
 				AC1AA6A51CB1CA40004A9DA6 /* suduko */,
-				AC1AA6B91CB1CA41004A9DA6 /* sudukoTests */,
 				AC1AA6C41CB1CA41004A9DA6 /* sudukoUITests */,
+				AC1AA6B91CB1CA41004A9DA6 /* sudukoTests */,
 			);
 		};
 /* End PBXProject section */
@@ -402,8 +402,30 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				HEADER_SEARCH_PATHS = /usr/local/include;
 				INFOPLIST_FILE = suduko/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
+				OTHER_LDFLAGS = (
+					"-lopencv_calib3d",
+					"-lopencv_core",
+					"-lopencv_features2d",
+					"-lopencv_flann",
+					"-lopencv_highgui",
+					"-lopencv_imgcodecs",
+					"-lopencv_imgproc",
+					"-lopencv_ml",
+					"-lopencv_objdetect",
+					"-lopencv_photo",
+					"-lopencv_shape",
+					"-lopencv_stitching",
+					"-lopencv_superres",
+					"-lopencv_ts",
+					"-lopencv_video",
+					"-lopencv_videoio",
+					"-lopencv_videostab",
+				);
+				"OTHER_LDFLAGS[arch=*]" = "";
 				PRODUCT_BUNDLE_IDENTIFIER = sammieg.suduko;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -413,8 +435,29 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				HEADER_SEARCH_PATHS = /usr/local/include;
 				INFOPLIST_FILE = suduko/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
+				OTHER_LDFLAGS = (
+					"-lopencv_calib3d",
+					"-lopencv_core",
+					"-lopencv_features2d",
+					"-lopencv_flann",
+					"-lopencv_highgui",
+					"-lopencv_imgcodecs",
+					"-lopencv_imgproc",
+					"-lopencv_ml",
+					"-lopencv_objdetect",
+					"-lopencv_photo",
+					"-lopencv_shape",
+					"-lopencv_stitching",
+					"-lopencv_superres",
+					"-lopencv_ts",
+					"-lopencv_video",
+					"-lopencv_videoio",
+					"-lopencv_videostab",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = sammieg.suduko;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -487,6 +530,7 @@
 				AC1AA6D01CB1CA41004A9DA6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AC1AA6D11CB1CA41004A9DA6 /* Build configuration list for PBXNativeTarget "sudukoTests" */ = {
 			isa = XCConfigurationList;
@@ -495,6 +539,7 @@
 				AC1AA6D31CB1CA41004A9DA6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AC1AA6D41CB1CA41004A9DA6 /* Build configuration list for PBXNativeTarget "sudukoUITests" */ = {
 			isa = XCConfigurationList;
@@ -503,6 +548,7 @@
 				AC1AA6D61CB1CA41004A9DA6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
