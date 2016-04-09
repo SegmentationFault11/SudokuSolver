@@ -6,27 +6,30 @@ provides-nominal:
 provides-member:
 - ["C6suduko14ViewController", ""]
 provides-dynamic-lookup:
-- "didReceiveMemoryWarning"
-- "imageView"
-- "imagePickerController"
-- "viewDidLoad"
 - "captureImage"
+- "imageView"
+- "didReceiveMemoryWarning"
+- "viewDidLoad"
+- "solveitman"
+- "imagePickerController"
 depends-top-level:
-- !private "BooleanLiteralType"
-- "UIImageView"
-- "String"
-- !private "UIImagePickerControllerOriginalImage"
-- !private "UIImagePickerControllerSourceType"
-- "ViewController"
-- "UIImagePickerController"
-- !private "UIImage"
-- "UIViewController"
-- !private "print"
-- "AnyObject"
 - "UIImagePickerControllerDelegate"
+- !private "UIImagePickerControllerOriginalImage"
+- "String"
 - "UINavigationControllerDelegate"
+- !private "print"
+- "UIImagePickerController"
 - !private "StringLiteralType"
+- !private "UIImagePickerControllerSourceType"
+- !private "UIImage"
+- "UIImageView"
+- "ViewController"
+- "AnyObject"
+- "UIViewController"
+- !private "BooleanLiteralType"
+- !private "OpenCVWrapper"
 depends-member:
+- !private ["Ps9AnyObject", "OpenCVWrapper"]
 - !private ["Ps9AnyObject", "UIImagePickerController"]
 - !private ["Ps9AnyObject", "UIImagePickerControllerOriginalImage"]
 - !private ["Ps9AnyObject", "UIImagePickerControllerSourceType"]
@@ -45,12 +48,15 @@ depends-member:
 - ["Ps9AnyObject", "navigationControllerSupportedInterfaceOrientations"]
 - !private ["Ps9AnyObject", "presentViewController"]
 - !private ["Ps9AnyObject", "print"]
+- !private ["Ps9AnyObject", "processImageWithOpenCV"]
+- ["Ps9AnyObject", "solveitman"]
 - !private ["Ps9AnyObject", "sourceType"]
 - ["Ps9AnyObject", "viewDidLoad"]
 - ["Ps9AnyObject", ""]
 - !private ["Sb", "_getBuiltinLogicValue"]
 - !private ["Ps25BooleanLiteralConvertible", "_getBuiltinLogicValue"]
 - !private ["Ps11BooleanType", "_getBuiltinLogicValue"]
+- !private ["Ps11CVarArgType", "OpenCVWrapper"]
 - !private ["Ps11CVarArgType", "UIImagePickerController"]
 - !private ["Ps11CVarArgType", "UIImagePickerControllerOriginalImage"]
 - !private ["Ps11CVarArgType", "UIImagePickerControllerSourceType"]
@@ -69,6 +75,8 @@ depends-member:
 - ["Ps11CVarArgType", "navigationControllerSupportedInterfaceOrientations"]
 - !private ["Ps11CVarArgType", "presentViewController"]
 - !private ["Ps11CVarArgType", "print"]
+- !private ["Ps11CVarArgType", "processImageWithOpenCV"]
+- ["Ps11CVarArgType", "solveitman"]
 - !private ["Ps11CVarArgType", "sourceType"]
 - ["Ps11CVarArgType", "viewDidLoad"]
 - ["Ps11CVarArgType", ""]
@@ -78,6 +86,7 @@ depends-member:
 - !private ["Ps14CollectionType", "_Element"]
 - !private ["Ps14CollectionType", "subscript"]
 - !private ["Ps28CustomDebugStringConvertible", "Index"]
+- !private ["Ps28CustomDebugStringConvertible", "OpenCVWrapper"]
 - !private ["Ps28CustomDebugStringConvertible", "UIImagePickerController"]
 - !private ["Ps28CustomDebugStringConvertible", "UIImagePickerControllerOriginalImage"]
 - !private ["Ps28CustomDebugStringConvertible", "UIImagePickerControllerSourceType"]
@@ -96,11 +105,14 @@ depends-member:
 - ["Ps28CustomDebugStringConvertible", "navigationControllerSupportedInterfaceOrientations"]
 - !private ["Ps28CustomDebugStringConvertible", "presentViewController"]
 - !private ["Ps28CustomDebugStringConvertible", "print"]
+- !private ["Ps28CustomDebugStringConvertible", "processImageWithOpenCV"]
+- ["Ps28CustomDebugStringConvertible", "solveitman"]
 - !private ["Ps28CustomDebugStringConvertible", "sourceType"]
 - !private ["Ps28CustomDebugStringConvertible", "subscript"]
 - ["Ps28CustomDebugStringConvertible", "viewDidLoad"]
 - ["Ps28CustomDebugStringConvertible", ""]
 - !private ["Ps23CustomStringConvertible", "Index"]
+- !private ["Ps23CustomStringConvertible", "OpenCVWrapper"]
 - !private ["Ps23CustomStringConvertible", "UIImagePickerController"]
 - !private ["Ps23CustomStringConvertible", "UIImagePickerControllerOriginalImage"]
 - !private ["Ps23CustomStringConvertible", "UIImagePickerControllerSourceType"]
@@ -120,6 +132,8 @@ depends-member:
 - ["Ps23CustomStringConvertible", "navigationControllerSupportedInterfaceOrientations"]
 - !private ["Ps23CustomStringConvertible", "presentViewController"]
 - !private ["Ps23CustomStringConvertible", "print"]
+- !private ["Ps23CustomStringConvertible", "processImageWithOpenCV"]
+- ["Ps23CustomStringConvertible", "solveitman"]
 - !private ["Ps23CustomStringConvertible", "sourceType"]
 - !private ["Ps23CustomStringConvertible", "subscript"]
 - ["Ps23CustomStringConvertible", "viewDidLoad"]
@@ -130,6 +144,7 @@ depends-member:
 - !private ["Ps28DictionaryLiteralConvertible", "Index"]
 - !private ["Ps28DictionaryLiteralConvertible", "subscript"]
 - !private ["Ps9Equatable", "Camera"]
+- !private ["Ps9Equatable", "OpenCVWrapper"]
 - !private ["Ps9Equatable", "UIImagePickerController"]
 - !private ["Ps9Equatable", "UIImagePickerControllerOriginalImage"]
 - !private ["Ps9Equatable", "UIImagePickerControllerSourceType"]
@@ -149,11 +164,14 @@ depends-member:
 - ["Ps9Equatable", "navigationControllerSupportedInterfaceOrientations"]
 - !private ["Ps9Equatable", "presentViewController"]
 - !private ["Ps9Equatable", "print"]
+- !private ["Ps9Equatable", "processImageWithOpenCV"]
+- ["Ps9Equatable", "solveitman"]
 - !private ["Ps9Equatable", "sourceType"]
 - ["Ps9Equatable", "viewDidLoad"]
 - ["Ps9Equatable", ""]
 - !private ["Ps13GeneratorType", "Element"]
 - !private ["Ps8Hashable", "Camera"]
+- !private ["Ps8Hashable", "OpenCVWrapper"]
 - !private ["Ps8Hashable", "UIImagePickerController"]
 - !private ["Ps8Hashable", "UIImagePickerControllerOriginalImage"]
 - !private ["Ps8Hashable", "UIImagePickerControllerSourceType"]
@@ -173,6 +191,8 @@ depends-member:
 - ["Ps8Hashable", "navigationControllerSupportedInterfaceOrientations"]
 - !private ["Ps8Hashable", "presentViewController"]
 - !private ["Ps8Hashable", "print"]
+- !private ["Ps8Hashable", "processImageWithOpenCV"]
+- ["Ps8Hashable", "solveitman"]
 - !private ["Ps8Hashable", "sourceType"]
 - ["Ps8Hashable", "viewDidLoad"]
 - ["Ps8Hashable", ""]
@@ -182,6 +202,7 @@ depends-member:
 - !private ["Ps9Indexable", "_Element"]
 - !private ["Ps9Indexable", "subscript"]
 - !private ["Vs17IndexingGenerator", "Element"]
+- !private ["PSo8NSCoding", "OpenCVWrapper"]
 - !private ["PSo8NSCoding", "UIImagePickerController"]
 - !private ["PSo8NSCoding", "UIImagePickerControllerOriginalImage"]
 - !private ["PSo8NSCoding", "UIImagePickerControllerSourceType"]
@@ -200,9 +221,11 @@ depends-member:
 - ["PSo8NSCoding", "navigationControllerSupportedInterfaceOrientations"]
 - !private ["PSo8NSCoding", "presentViewController"]
 - !private ["PSo8NSCoding", "print"]
+- ["PSo8NSCoding", "solveitman"]
 - !private ["PSo8NSCoding", "sourceType"]
 - ["PSo8NSCoding", "viewDidLoad"]
 - ["PSo8NSCoding", ""]
+- !private ["PSo26NSExtensionRequestHandling", "OpenCVWrapper"]
 - !private ["PSo26NSExtensionRequestHandling", "UIImagePickerController"]
 - !private ["PSo26NSExtensionRequestHandling", "UIImagePickerControllerOriginalImage"]
 - !private ["PSo26NSExtensionRequestHandling", "UIImagePickerControllerSourceType"]
@@ -220,10 +243,12 @@ depends-member:
 - ["PSo26NSExtensionRequestHandling", "navigationControllerSupportedInterfaceOrientations"]
 - !private ["PSo26NSExtensionRequestHandling", "presentViewController"]
 - !private ["PSo26NSExtensionRequestHandling", "print"]
+- ["PSo26NSExtensionRequestHandling", "solveitman"]
 - !private ["PSo26NSExtensionRequestHandling", "sourceType"]
 - ["PSo26NSExtensionRequestHandling", "viewDidLoad"]
 - ["PSo26NSExtensionRequestHandling", ""]
 - ["CSo8NSObject", "AnyObject"]
+- !private ["CSo8NSObject", "OpenCVWrapper"]
 - ["CSo8NSObject", "String"]
 - !private ["CSo8NSObject", "UIImage"]
 - ["CSo8NSObject", "UIImagePickerController"]
@@ -245,8 +270,11 @@ depends-member:
 - ["CSo8NSObject", "navigationControllerSupportedInterfaceOrientations"]
 - !private ["CSo8NSObject", "presentViewController"]
 - !private ["CSo8NSObject", "print"]
+- !private ["CSo8NSObject", "processImageWithOpenCV"]
+- ["CSo8NSObject", "solveitman"]
 - !private ["CSo8NSObject", "sourceType"]
 - ["CSo8NSObject", "viewDidLoad"]
+- !private ["PSo16NSObjectProtocol", "OpenCVWrapper"]
 - !private ["PSo16NSObjectProtocol", "UIImagePickerController"]
 - !private ["PSo16NSObjectProtocol", "UIImagePickerControllerOriginalImage"]
 - !private ["PSo16NSObjectProtocol", "UIImagePickerControllerSourceType"]
@@ -265,9 +293,12 @@ depends-member:
 - ["PSo16NSObjectProtocol", "navigationControllerSupportedInterfaceOrientations"]
 - !private ["PSo16NSObjectProtocol", "presentViewController"]
 - !private ["PSo16NSObjectProtocol", "print"]
+- !private ["PSo16NSObjectProtocol", "processImageWithOpenCV"]
+- ["PSo16NSObjectProtocol", "solveitman"]
 - !private ["PSo16NSObjectProtocol", "sourceType"]
 - ["PSo16NSObjectProtocol", "viewDidLoad"]
 - ["PSo16NSObjectProtocol", ""]
+- !private ["CSo13OpenCVWrapper", "processImageWithOpenCV"]
 - !private ["Sq", "deinit"]
 - !private ["Ps16RawRepresentable", "Camera"]
 - !private ["Ps12SequenceType", "Element"]
@@ -282,6 +313,7 @@ depends-member:
 - !private ["Vs5Slice", "_Element"]
 - !private ["PSo29UIAccessibilityIdentification", "image"]
 - !private ["PSo12UIAppearance", "image"]
+- !private ["PSo21UIAppearanceContainer", "OpenCVWrapper"]
 - !private ["PSo21UIAppearanceContainer", "UIImagePickerController"]
 - !private ["PSo21UIAppearanceContainer", "UIImagePickerControllerOriginalImage"]
 - !private ["PSo21UIAppearanceContainer", "UIImagePickerControllerSourceType"]
@@ -300,9 +332,11 @@ depends-member:
 - ["PSo21UIAppearanceContainer", "navigationControllerSupportedInterfaceOrientations"]
 - !private ["PSo21UIAppearanceContainer", "presentViewController"]
 - !private ["PSo21UIAppearanceContainer", "print"]
+- ["PSo21UIAppearanceContainer", "solveitman"]
 - !private ["PSo21UIAppearanceContainer", "sourceType"]
 - ["PSo21UIAppearanceContainer", "viewDidLoad"]
 - ["PSo21UIAppearanceContainer", ""]
+- !private ["PSo18UIContentContainer", "OpenCVWrapper"]
 - !private ["PSo18UIContentContainer", "UIImagePickerController"]
 - !private ["PSo18UIContentContainer", "UIImagePickerControllerOriginalImage"]
 - !private ["PSo18UIContentContainer", "UIImagePickerControllerSourceType"]
@@ -320,11 +354,13 @@ depends-member:
 - ["PSo18UIContentContainer", "navigationControllerSupportedInterfaceOrientations"]
 - !private ["PSo18UIContentContainer", "presentViewController"]
 - !private ["PSo18UIContentContainer", "print"]
+- ["PSo18UIContentContainer", "solveitman"]
 - !private ["PSo18UIContentContainer", "sourceType"]
 - ["PSo18UIContentContainer", "viewDidLoad"]
 - ["PSo18UIContentContainer", ""]
 - !private ["PSo17UICoordinateSpace", "image"]
 - !private ["PSo13UIDynamicItem", "image"]
+- !private ["PSo18UIFocusEnvironment", "OpenCVWrapper"]
 - !private ["PSo18UIFocusEnvironment", "UIImagePickerController"]
 - !private ["PSo18UIFocusEnvironment", "UIImagePickerControllerOriginalImage"]
 - !private ["PSo18UIFocusEnvironment", "UIImagePickerControllerSourceType"]
@@ -343,6 +379,7 @@ depends-member:
 - ["PSo18UIFocusEnvironment", "navigationControllerSupportedInterfaceOrientations"]
 - !private ["PSo18UIFocusEnvironment", "presentViewController"]
 - !private ["PSo18UIFocusEnvironment", "print"]
+- ["PSo18UIFocusEnvironment", "solveitman"]
 - !private ["PSo18UIFocusEnvironment", "sourceType"]
 - ["PSo18UIFocusEnvironment", "viewDidLoad"]
 - ["PSo18UIFocusEnvironment", ""]
@@ -350,6 +387,7 @@ depends-member:
 - !private ["CSo23UIImagePickerController", "init"]
 - !private ["CSo23UIImagePickerController", "isSourceTypeAvailable"]
 - !private ["CSo23UIImagePickerController", "sourceType"]
+- !private ["PSo31UIImagePickerControllerDelegate", "OpenCVWrapper"]
 - !private ["PSo31UIImagePickerControllerDelegate", "UIImagePickerController"]
 - !private ["PSo31UIImagePickerControllerDelegate", "UIImagePickerControllerOriginalImage"]
 - !private ["PSo31UIImagePickerControllerDelegate", "UIImagePickerControllerSourceType"]
@@ -369,6 +407,7 @@ depends-member:
 - !private ["CSo22UINavigationController", "init"]
 - !private ["CSo22UINavigationController", "isSourceTypeAvailable"]
 - !private ["CSo22UINavigationController", "sourceType"]
+- !private ["PSo30UINavigationControllerDelegate", "OpenCVWrapper"]
 - !private ["PSo30UINavigationControllerDelegate", "UIImagePickerController"]
 - !private ["PSo30UINavigationControllerDelegate", "UIImagePickerControllerOriginalImage"]
 - !private ["PSo30UINavigationControllerDelegate", "UIImagePickerControllerSourceType"]
@@ -383,6 +422,7 @@ depends-member:
 - !private ["PSo30UINavigationControllerDelegate", "print"]
 - ["PSo30UINavigationControllerDelegate", ""]
 - ["CSo11UIResponder", "AnyObject"]
+- !private ["CSo11UIResponder", "OpenCVWrapper"]
 - ["CSo11UIResponder", "String"]
 - !private ["CSo11UIResponder", "UIImage"]
 - ["CSo11UIResponder", "UIImagePickerController"]
@@ -404,8 +444,10 @@ depends-member:
 - ["CSo11UIResponder", "navigationControllerSupportedInterfaceOrientations"]
 - !private ["CSo11UIResponder", "presentViewController"]
 - !private ["CSo11UIResponder", "print"]
+- ["CSo11UIResponder", "solveitman"]
 - !private ["CSo11UIResponder", "sourceType"]
 - ["CSo11UIResponder", "viewDidLoad"]
+- !private ["PSo16UIStateRestoring", "OpenCVWrapper"]
 - !private ["PSo16UIStateRestoring", "UIImagePickerController"]
 - !private ["PSo16UIStateRestoring", "UIImagePickerControllerOriginalImage"]
 - !private ["PSo16UIStateRestoring", "UIImagePickerControllerSourceType"]
@@ -423,9 +465,11 @@ depends-member:
 - ["PSo16UIStateRestoring", "navigationControllerSupportedInterfaceOrientations"]
 - !private ["PSo16UIStateRestoring", "presentViewController"]
 - !private ["PSo16UIStateRestoring", "print"]
+- ["PSo16UIStateRestoring", "solveitman"]
 - !private ["PSo16UIStateRestoring", "sourceType"]
 - ["PSo16UIStateRestoring", "viewDidLoad"]
 - ["PSo16UIStateRestoring", ""]
+- !private ["PSo18UITraitEnvironment", "OpenCVWrapper"]
 - !private ["PSo18UITraitEnvironment", "UIImagePickerController"]
 - !private ["PSo18UITraitEnvironment", "UIImagePickerControllerOriginalImage"]
 - !private ["PSo18UITraitEnvironment", "UIImagePickerControllerSourceType"]
@@ -444,11 +488,13 @@ depends-member:
 - ["PSo18UITraitEnvironment", "navigationControllerSupportedInterfaceOrientations"]
 - !private ["PSo18UITraitEnvironment", "presentViewController"]
 - !private ["PSo18UITraitEnvironment", "print"]
+- ["PSo18UITraitEnvironment", "solveitman"]
 - !private ["PSo18UITraitEnvironment", "sourceType"]
 - ["PSo18UITraitEnvironment", "viewDidLoad"]
 - ["PSo18UITraitEnvironment", ""]
 - !private ["CSo6UIView", "image"]
 - ["CSo16UIViewController", "AnyObject"]
+- !private ["CSo16UIViewController", "OpenCVWrapper"]
 - ["CSo16UIViewController", "String"]
 - !private ["CSo16UIViewController", "UIImage"]
 - ["CSo16UIViewController", "UIImagePickerController"]
@@ -469,10 +515,12 @@ depends-member:
 - ["CSo16UIViewController", "navigationControllerSupportedInterfaceOrientations"]
 - !private ["CSo16UIViewController", "presentViewController"]
 - !private ["CSo16UIViewController", "print"]
+- ["CSo16UIViewController", "solveitman"]
 - !private ["CSo16UIViewController", "sourceType"]
 - ["CSo16UIViewController", "viewDidLoad"]
 - ["CSo16UIViewController", ""]
 - ["C6suduko14ViewController", "AnyObject"]
+- !private ["C6suduko14ViewController", "OpenCVWrapper"]
 - ["C6suduko14ViewController", "String"]
 - !private ["C6suduko14ViewController", "UIImage"]
 - ["C6suduko14ViewController", "UIImagePickerController"]
@@ -492,6 +540,7 @@ depends-member:
 - ["C6suduko14ViewController", "navigationControllerSupportedInterfaceOrientations"]
 - !private ["C6suduko14ViewController", "presentViewController"]
 - !private ["C6suduko14ViewController", "print"]
+- ["C6suduko14ViewController", "solveitman"]
 - ["C6suduko14ViewController", "viewDidLoad"]
 - !private ["Ps33_BuiltinBooleanLiteralConvertible", "_getBuiltinLogicValue"]
 - !private ["Ps21_ObjectiveCBridgeable", "Index"]
@@ -521,6 +570,7 @@ depends-nominal:
 - "PSo26NSExtensionRequestHandling"
 - "CSo8NSObject"
 - "PSo16NSObjectProtocol"
+- !private "CSo13OpenCVWrapper"
 - !private "Sq"
 - !private "Ps16RawRepresentable"
 - !private "Ps12SequenceType"
@@ -550,6 +600,8 @@ depends-nominal:
 depends-dynamic-lookup:
 depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Users/Sammie/Desktop/suduko/SudokuSolver/suduko/suduko-Bridging-Header.h"
+- "/Users/Sammie/Desktop/suduko/SudokuSolver/suduko/OpenCVWrapper.h"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
@@ -557,4 +609,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
-interface-hash: "c42cd74b24565b685122e5225a2e75fa"
+interface-hash: "da1a9ed53ba7e888d7ea810247994e50"

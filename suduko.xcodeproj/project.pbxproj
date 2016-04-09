@@ -14,6 +14,7 @@
 		AC1AA6B41CB1CA41004A9DA6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC1AA6B21CB1CA41004A9DA6 /* LaunchScreen.storyboard */; };
 		AC1AA6BF1CB1CA41004A9DA6 /* sudukoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1AA6BE1CB1CA41004A9DA6 /* sudukoTests.swift */; };
 		AC1AA6CA1CB1CA41004A9DA6 /* sudukoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1AA6C91CB1CA41004A9DA6 /* sudukoUITests.swift */; };
+		AC36215A1CB9A6E1004C1D23 /* OpenCVWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = AC3621591CB9A6E1004C1D23 /* OpenCVWrapper.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,10 @@
 		AC1AA6C51CB1CA41004A9DA6 /* sudukoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = sudukoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC1AA6C91CB1CA41004A9DA6 /* sudukoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sudukoUITests.swift; sourceTree = "<group>"; };
 		AC1AA6CB1CB1CA41004A9DA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC3255351CB99A7800E2C712 /* OpenCVWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpenCVWrapper.h; sourceTree = "<group>"; };
+		AC3255361CB99AB400E2C712 /* suduko-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "suduko-Bridging-Header.h"; sourceTree = "<group>"; };
+		AC3621581CB9A5F0004C1D23 /* UIImage+OpenCV.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+OpenCV.h"; sourceTree = "<group>"; };
+		AC3621591CB9A6E1004C1D23 /* OpenCVWrapper.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = OpenCVWrapper.mm; path = ../OpenCVWrapper.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,10 +104,14 @@
 			children = (
 				AC1AA6A91CB1CA40004A9DA6 /* AppDelegate.swift */,
 				AC1AA6AB1CB1CA40004A9DA6 /* ViewController.swift */,
+				AC3255351CB99A7800E2C712 /* OpenCVWrapper.h */,
+				AC3621591CB9A6E1004C1D23 /* OpenCVWrapper.mm */,
+				AC3621581CB9A5F0004C1D23 /* UIImage+OpenCV.h */,
 				AC1AA6AD1CB1CA41004A9DA6 /* Main.storyboard */,
 				AC1AA6B01CB1CA41004A9DA6 /* Assets.xcassets */,
 				AC1AA6B21CB1CA41004A9DA6 /* LaunchScreen.storyboard */,
 				AC1AA6B51CB1CA41004A9DA6 /* Info.plist */,
+				AC3255361CB99AB400E2C712 /* suduko-Bridging-Header.h */,
 			);
 			path = suduko;
 			sourceTree = "<group>";
@@ -187,7 +196,7 @@
 		AC1AA69E1CB1CA40004A9DA6 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0710;
+				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = sammieg;
 				TargetAttributes = {
@@ -261,6 +270,7 @@
 			files = (
 				AC1AA6AC1CB1CA40004A9DA6 /* ViewController.swift in Sources */,
 				AC1AA6AA1CB1CA40004A9DA6 /* AppDelegate.swift in Sources */,
+				AC36215A1CB9A6E1004C1D23 /* OpenCVWrapper.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,9 +361,30 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				"HEADER_SEARCH_PATHS[arch=*]" = /usr/local/include;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				"LIBRARY_SEARCH_PATHS[arch=*]" = /usr/local/lib;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				"OTHER_LDFLAGS[arch=*]" = (
+					"-lopencv_calib3d",
+					"-lopencv_core",
+					"-lopencv_features2d",
+					"-lopencv_flann",
+					"-lopencv_highgui",
+					"-lopencv_imgcodecs",
+					"-lopencv_imgproc",
+					"-lopencv_ml",
+					"-lopencv_objdetect",
+					"-lopencv_photo",
+					"-lopencv_shape",
+					"-lopencv_stitching",
+					"-lopencv_superres",
+					"-lopencv_ts",
+					"-lopencv_video",
+					"-lopencv_videoio",
+					"-lopencv_videostab",
+				);
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -390,8 +421,29 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				"HEADER_SEARCH_PATHS[arch=*]" = /usr/local/include;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				"LIBRARY_SEARCH_PATHS[arch=*]" = /usr/local/lib;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				"OTHER_LDFLAGS[arch=*]" = (
+					"-lopencv_calib3d",
+					"-lopencv_core",
+					"-lopencv_features2d",
+					"-lopencv_flann",
+					"-lopencv_highgui",
+					"-lopencv_imgcodecs",
+					"-lopencv_imgproc",
+					"-lopencv_ml",
+					"-lopencv_objdetect",
+					"-lopencv_photo",
+					"-lopencv_shape",
+					"-lopencv_stitching",
+					"-lopencv_superres",
+					"-lopencv_ts",
+					"-lopencv_video",
+					"-lopencv_videoio",
+					"-lopencv_videostab",
+				);
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -402,6 +454,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				HEADER_SEARCH_PATHS = /usr/local/include;
 				INFOPLIST_FILE = suduko/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -428,6 +481,8 @@
 				"OTHER_LDFLAGS[arch=*]" = "";
 				PRODUCT_BUNDLE_IDENTIFIER = sammieg.suduko;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "suduko/suduko-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -435,6 +490,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				HEADER_SEARCH_PATHS = /usr/local/include;
 				INFOPLIST_FILE = suduko/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -460,6 +516,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = sammieg.suduko;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "suduko/suduko-Bridging-Header.h";
 			};
 			name = Release;
 		};

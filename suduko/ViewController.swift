@@ -26,7 +26,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
     
     @IBAction func captureImage(){
         
-        var imageFromSource = UIImagePickerController()
+        let imageFromSource = UIImagePickerController()
         imageFromSource.delegate = self
         
         if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera){
@@ -43,10 +43,19 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
     }
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
-        var temp: UIImage = info[UIImagePickerControllerOriginalImage] as! UIImage
+        let temp: UIImage = info[UIImagePickerControllerOriginalImage] as! UIImage
         imageView.image = temp
         self.dismissViewControllerAnimated(true, completion: {})
     }
+    
+    
+    @IBAction func solveitman(sender: AnyObject) {
+        
+        let processedImage = OpenCVWrapper.processImageWithOpenCV(imageView.image)
+        
+    }
+    
+    
 
 }
 
