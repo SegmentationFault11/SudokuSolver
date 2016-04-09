@@ -15,6 +15,7 @@
 		AC1AA6BF1CB1CA41004A9DA6 /* sudukoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1AA6BE1CB1CA41004A9DA6 /* sudukoTests.swift */; };
 		AC1AA6CA1CB1CA41004A9DA6 /* sudukoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1AA6C91CB1CA41004A9DA6 /* sudukoUITests.swift */; };
 		AC36215A1CB9A6E1004C1D23 /* OpenCVWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = AC3621591CB9A6E1004C1D23 /* OpenCVWrapper.mm */; };
+		AC36215C1CB9A847004C1D23 /* UIImage+OpenCV.mm in Sources */ = {isa = PBXBuildFile; fileRef = AC36215B1CB9A847004C1D23 /* UIImage+OpenCV.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		AC3255361CB99AB400E2C712 /* suduko-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "suduko-Bridging-Header.h"; sourceTree = "<group>"; };
 		AC3621581CB9A5F0004C1D23 /* UIImage+OpenCV.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+OpenCV.h"; sourceTree = "<group>"; };
 		AC3621591CB9A6E1004C1D23 /* OpenCVWrapper.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = OpenCVWrapper.mm; path = ../OpenCVWrapper.mm; sourceTree = "<group>"; };
+		AC36215B1CB9A847004C1D23 /* UIImage+OpenCV.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "UIImage+OpenCV.mm"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 				AC3255351CB99A7800E2C712 /* OpenCVWrapper.h */,
 				AC3621591CB9A6E1004C1D23 /* OpenCVWrapper.mm */,
 				AC3621581CB9A5F0004C1D23 /* UIImage+OpenCV.h */,
+				AC36215B1CB9A847004C1D23 /* UIImage+OpenCV.mm */,
 				AC1AA6AD1CB1CA41004A9DA6 /* Main.storyboard */,
 				AC1AA6B01CB1CA41004A9DA6 /* Assets.xcassets */,
 				AC1AA6B21CB1CA41004A9DA6 /* LaunchScreen.storyboard */,
@@ -268,6 +271,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC36215C1CB9A847004C1D23 /* UIImage+OpenCV.mm in Sources */,
 				AC1AA6AC1CB1CA40004A9DA6 /* ViewController.swift in Sources */,
 				AC1AA6AA1CB1CA40004A9DA6 /* AppDelegate.swift in Sources */,
 				AC36215A1CB9A6E1004C1D23 /* OpenCVWrapper.mm in Sources */,
